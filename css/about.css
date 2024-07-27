@@ -1,0 +1,226 @@
+/* ############ Achevements ############ */
+.about__achievements{
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
+.about__achievements-container{
+   display: grid;
+   grid-template-columns: 40% 60%;
+   gap: 5rem;
+}
+.about__achievements-right > p{
+   margin: 1.6rem 0 2.5rem;
+}
+
+.achievements__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+
+}
+.achievement__card{
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.achievement__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+    transition: var(--transition);
+
+}
+.achievement__icon{
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.achievement__card:nth-child(2) .achievement__icon{
+    background: var(--color-success);
+}
+.achievement__card:nth-child(3) .achievement__icon{
+    background: var(--color-primary);
+}
+.achievement__card p{
+    margin-top: 1rem;
+}
+
+/* ############ TEAMS ############ */
+
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.team h2{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.team__member{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.team__member:hover{
+    background: transparent;
+    background-color: var(--color-success);
+}
+.team__member-image img{
+    filter: saturate(0);
+}
+.team__member:hover img{
+    filter: saturate(1);
+}
+.team__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+.team__member-info p{
+    color: var(--color-light);
+}
+
+.team__member-socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0,0,0,0.3);
+    transition: var(--transition);
+
+}
+.team__member:hover .team__member-socials{
+    right: 0;
+}
+.team__member-socials a{
+    padding: 1rem;
+}
+
+/* ####### Media Queries (Tablets) ########## */
+@media screen and (max-width:1024px) {
+    .about__achievements{
+        margin-top: 2rem;
+    }
+    .about__achievements-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .about__achievements-left{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .team__container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+    .team__member{
+        padding: 1rem;
+    }
+    
+}
+
+/* ####### Media Queries (Phones) ########## */
+@media screen and (max-width:600px) {
+   .achievements__cards{
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+   }
+   .team__container{
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+   }
+   .team__member{
+    padding: 0;
+   }
+   .team__member p{
+    margin-bottom: 1.5rem;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+<div class="container footer__container">
+
+   <div class="footer__1">
+       <a href="index.html" class="footer__logo"><h4>GALACTIC</h4></a>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, provident!</p>
+   </div>
+
+   <div class="footer__2">
+   <h4>Permalinks</h4>
+   <ul class="permalinks">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="courses.html">Courses</a></li>
+       <li><a href="contact.html">Contact</a></li>
+   </ul>
+ </div>
+
+<div class="footer__3">
+   <h4>Privacy</h4>
+   <ul class="privacy">
+       <li><a href="#"></a>Privacy Policy</li>
+       <li><a href="#"></a>Terms and Conditions</li>
+       <li><a href="#"></a>Refund Policy</li>
+   </ul>
+ </div>
+
+<div class="footer__4">
+     <h4>Contact Us</h4>
+     <div>
+       <p>+82 532 032 4005</p>
+       <p>kumarchandradeo49@gmail.com</p>
+     </div>
+
+     <ul class="footer__socials">
+       <li><a href="#"><i class="uil uil-facebook-f"></i></a></li>
+       <li><a href="#"><i class="uil uil-instagram-alt"></i></a></li>
+       <li><a href="#"><i class="uil uil-twitter"></i></a></li>
+       <li><a href="#"><i class="uil uil-linkedin-alt"></i></a></li>
+     </ul>
+  </div>
+
+</div>
+
+<div class="footer__copyright">
+<small>Copyright &copy; GALACTIC YouTube Tutorials</small>
+</div>
+</footer>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
